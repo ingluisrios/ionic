@@ -1,0 +1,7 @@
+{
+  "name": "presupuesto",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
