@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Ingresar Pago</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>{{nomgas}}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content >
+
+        <form [formGroup]="ionicForm" (ngSubmit)="submitForm()">
+
+          <ion-input label="Pago" placeholder="Valor pago" formControlName="valgas">
+          </ion-input>
+
+          <ion-button type="submit">
+
+            Guardar
+          </ion-button>
+          <ion-button [routerLink]="['/valoresgastos']">
+            <ion-icon name="arrow-back-circle-outline"></ion-icon>
+            Regresar
+          </ion-button>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

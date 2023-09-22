@@ -11,6 +11,26 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'gastos',
+    loadChildren: () => import('./gastos/gastos.module').then( m => m.GastosPageModule)
+  },
+  {
+    path: 'grupogastos',
+    loadChildren: () => import('./grupogastos/grupogastos.module').then( m => m.GrupogastosPageModule)
+  },
+  {
+    path: 'grupos',
+    loadChildren: () => import('./grupos/grupos.module').then( m => m.GruposPageModule)
+  },
+  {
+    path: 'valoresgastos',
+    loadChildren: () => import('./valoresgastos/valoresgastos.module').then( m => m.ValoresgastosPageModule)
+  },
+  {
+    path: 'ingresarpago/:id',
+    loadChildren: () => import('./ingresarpago/ingresarpago.module').then( m => m.IngresarpagoPageModule)
+  },
 ];
 
 @NgModule({
